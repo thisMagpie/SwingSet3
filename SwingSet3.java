@@ -745,7 +745,7 @@ public class SwingSet3 extends JPanel {
                     screenInsets.top : centerHeight;
 
             f.setLocation(centerWidth, centerHeight);
-	    f.show();
+	    f.setVisible(true);
             numSSs++;
             swingSets.add(this);
 	} 
@@ -1313,7 +1313,7 @@ public class SwingSet3 extends JPanel {
             } else {
                 aboutBox.setLocationRelativeTo(getFrame());
             }
-	    aboutBox.show();
+	    aboutBox.setVisible(true);
 	}
     }
 
