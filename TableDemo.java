@@ -84,8 +84,8 @@ public class TableDemo extends DemoModule {
     JSlider     interCellSpacingSlider;
     JSlider     rowHeightSlider;
 
-    JComboBox	selectionModeComboBox = null;
-    JComboBox	resizeModeComboBox = null;
+    JComboBox<Object> selectionModeComboBox = null;
+    JComboBox<Object> resizeModeComboBox    = null;
 
     JLabel      headerLabel;
     JLabel      footerLabel;
@@ -135,7 +135,7 @@ public class TableDemo extends DemoModule {
         JPanel printPanel = new JPanel(new ColumnLayout());
 
 	getDemoPanel().add(controlPanel, BorderLayout.NORTH);
-	Vector relatedComponents = new Vector();
+	Vector<Object> relatedComponents = new Vector<>();
 
 
         // check box panel
@@ -254,7 +254,7 @@ public class TableDemo extends DemoModule {
       	selectMode.setBorder(new TitledBorder(getString("TableDemo.selection_mode")));
 
 
-        selectionModeComboBox = new JComboBox() {
+        selectionModeComboBox = new JComboBox<Object>() {
             public Dimension getMaximumSize() {
                 return getPreferredSize();
             }
@@ -281,7 +281,7 @@ public class TableDemo extends DemoModule {
 	resizeMode.setBorder(new TitledBorder(getString("TableDemo.autoresize_mode")));
 
 
-        resizeModeComboBox = new JComboBox() {
+        resizeModeComboBox = new JComboBox<Object>() {
             public Dimension getMaximumSize() {
                 return getPreferredSize();
             }
@@ -566,7 +566,7 @@ public class TableDemo extends DemoModule {
 
         // Create the table
         tableView = new JTable(dataModel);
-        TableRowSorter sorter = new TableRowSorter(dataModel);
+        TableRowSorter<TableModel> sorter = new TableRowSorter<>(dataModel);
         tableView.setRowSorter(sorter);
 
         // Show colors by rendering them in their own color.
@@ -584,7 +584,7 @@ public class TableDemo extends DemoModule {
         };
 
 	// Create a combo box to show that you can use one in a table.
-        JComboBox comboBox = new JComboBox();
+	JComboBox<NamedColor> comboBox = new JComboBox<>();
 	comboBox.addItem(aqua);
 	comboBox.addItem(beige);
 	comboBox.addItem(black);
