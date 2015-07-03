@@ -94,16 +94,14 @@ class BezierAnimationPanel extends JPanel implements Runnable {
      */
     public BezierAnimationPanel() {
         addHierarchyListener(
-	    new HierarchyListener() {
-	       public void hierarchyChanged(HierarchyEvent e) {
-		   if(isShowing()) {
-		       start();
-		   } else {
-		       stop();
-		   }
-	       }
-	   }
-	);
+                (HierarchyEvent e) -> {
+                if(isShowing()) {
+                    start();
+                } else {
+                    stop();
+                }
+                }
+		);
 	setBackground(getBackgroundColor());
     }
 
