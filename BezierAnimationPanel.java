@@ -200,7 +200,7 @@ class BezierAnimationPanel extends JPanel implements Runnable {
 	Thread me = Thread.currentThread();
 	while (getSize().width <= 0) {
 	    try {
-		anim.sleep(500);
+		Thread.sleep(500);
 	    } catch (InterruptedException e) {
 		return;
 	    }
