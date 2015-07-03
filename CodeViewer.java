@@ -352,12 +352,7 @@ public class CodeViewer {
             rightCount ++;
             right = right.substring(index+1); 
         }
-        if (rightCount % 2 != 0 && leftCount % 2 != 0) {
-            return true;
-        }
-        else {
-            return false;
-        }        
+        return rightCount % 2 != 0 && leftCount % 2 != 0;
     }
 
     /*
