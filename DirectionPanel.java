@@ -158,7 +158,7 @@ public class DirectionPanel extends JPanel {
             setSelected(selected);
         }
 
-        public boolean isFocusTraversable() {
+        public boolean isFocusable() {
             return false;
         }
 
