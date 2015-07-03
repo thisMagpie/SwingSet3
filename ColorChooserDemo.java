@@ -39,6 +39,7 @@
  */
 
 
+import javax.accessibility.AccessibleContext;
 import javax.swing.*;
 
 import java.awt.*;
@@ -127,6 +128,8 @@ public class ColorChooserDemo extends DemoModule {
                                                             null);
 
                 dialog.setVisible(true);
+        AccessibleContext ac = chooser.getAccessibleContext();
+        ac.setAccessibleDescription(getString("ColorChooserDemo.accessible_description"));
 
 		if(e.getSource() == outerColorButton) {
 		    bezAnim.setOuterColor(chosen);
