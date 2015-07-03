@@ -68,9 +68,9 @@ import java.util.Hashtable;
  * @author Jeff Dinkins
  */
 public class ExampleFileView extends FileView {
-    private Hashtable icons = new Hashtable(5);
-    private Hashtable fileDescriptions = new Hashtable(5);
-    private Hashtable typeDescriptions = new Hashtable(5);
+    private Hashtable<String,Icon> icons              = new Hashtable<>(5);
+    private Hashtable<File,String> fileDescriptions   = new Hashtable<>(5);
+    private Hashtable<String,String> typeDescriptions = new Hashtable<>(5);
 
     /**
      * The name of the file.  Do nothing special here. Let
