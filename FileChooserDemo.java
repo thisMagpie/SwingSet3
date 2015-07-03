@@ -371,14 +371,13 @@ public class FileChooserDemo extends DemoModule {
     }
 
     public JButton createButton(Action a) {
-	JButton b = new JButton(a) {
-	    public Dimension getMaximumSize() {
-		int width = Short.MAX_VALUE;
-		int height = super.getMaximumSize().height;
-		return new Dimension(width, height);
-	    }
-	};
-	return b;
+        return new JButton(a) {
+            public Dimension getMaximumSize() {
+            int width = Short.MAX_VALUE;
+            int height = super.getMaximumSize().height;
+            return new Dimension(width, height);
+            }
+        };
     }
 
     public JButton createImageButton(Action a) {
