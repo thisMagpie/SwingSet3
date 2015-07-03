@@ -261,6 +261,8 @@ public class ComboBoxDemo extends DemoModule implements ActionListener {
                                                         "ComboBoxDemo.preset10"
     } );
     cb.addActionListener(this);
+    AccessibleContext ac = cb.getAccessibleContext();
+    ac.setAccessibleDescription(getString("ComboBoxDemo.accessible_description"));
     return cb;
   }
 
