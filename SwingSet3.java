@@ -40,11 +40,7 @@
 
 import javax.swing.*;
 import javax.swing.event.*;
-import javax.swing.text.*;
 import javax.swing.border.*;
-import javax.swing.colorchooser.*;
-import javax.swing.filechooser.*;
-import javax.accessibility.*;
 
 import javax.swing.plaf.metal.MetalTheme;
 import javax.swing.plaf.metal.OceanTheme;
@@ -54,11 +50,7 @@ import javax.swing.plaf.metal.MetalLookAndFeel;
 import java.lang.reflect.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.beans.*;
 import java.util.*;
-import java.io.*;
-import java.applet.*;
-import java.net.*;
 
 /**
  * A demo that shows all of the Swing components.

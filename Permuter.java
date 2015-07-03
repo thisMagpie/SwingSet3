@@ -39,9 +39,6 @@
  */
 
 
-
-import java.util.Random;
-
 /**
  * An object that implements a cheesy pseudorandom permutation of the integers
  * from zero to some user-specified value. (The permutation is a linear

@@ -40,15 +40,8 @@
 
 
 import javax.swing.*;
-import javax.swing.event.*;
-import javax.swing.text.*;
-import javax.swing.border.*;
-import javax.swing.colorchooser.*;
-import javax.swing.filechooser.*;
-import javax.accessibility.*;
- 
+
 import java.awt.*;
-import java.awt.font.*;
 import java.awt.geom.*;
 import java.awt.image.*;
 import java.awt.event.*;

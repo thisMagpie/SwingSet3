@@ -39,12 +39,9 @@
  */
 
 import javax.swing.*;
-import javax.swing.text.*;
-import javax.swing.border.*;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.util.*;
 
 /*
  * The LayoutControlPanel contains controls for setting an 
