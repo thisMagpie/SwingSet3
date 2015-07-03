@@ -152,8 +152,8 @@ public class TableDemo extends DemoModule {
         showHorizontalLinesCheckBox.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
 	        boolean flag = ((JCheckBox)e.getSource()).isSelected();
-                tableView.setShowHorizontalLines(flag); ;
-                tableView.repaint();
+                tableView.setShowHorizontalLines(flag);
+            tableView.repaint();
 	    }
         });
 
@@ -161,8 +161,8 @@ public class TableDemo extends DemoModule {
         showVerticalLinesCheckBox.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
 	        boolean flag = ((JCheckBox)e.getSource()).isSelected();
-                tableView.setShowVerticalLines(flag); ;
-                tableView.repaint();
+                tableView.setShowVerticalLines(flag);
+            tableView.repaint();
 	    }
         });
 
@@ -176,7 +176,7 @@ public class TableDemo extends DemoModule {
         isRowSelectionAllowedCheckBox.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 boolean flag = ((JCheckBox)e.getSource()).isSelected();
-                tableView.setRowSelectionAllowed(flag); ;
+                tableView.setRowSelectionAllowed(flag);
                 tableView.repaint();
             }
         });
@@ -185,7 +185,7 @@ public class TableDemo extends DemoModule {
         isColumnSelectionAllowedCheckBox.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 boolean flag = ((JCheckBox)e.getSource()).isSelected();
-                tableView.setColumnSelectionAllowed(flag); ;
+                tableView.setColumnSelectionAllowed(flag);
                 tableView.repaint();
             }
         });

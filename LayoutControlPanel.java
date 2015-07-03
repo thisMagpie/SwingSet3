@@ -204,7 +204,7 @@ public class LayoutControlPanel extends JPanel implements SwingConstants {
 	    demo.validate();
 	    demo.repaint();            
 	}
-    };
+    }
 
 
     // Text Position Listener
@@ -243,7 +243,7 @@ public class LayoutControlPanel extends JPanel implements SwingConstants {
             demo.validate();
             demo.repaint();
 	}
-    };
+    }
 
 
     // Label Alignment Listener
@@ -283,7 +283,7 @@ public class LayoutControlPanel extends JPanel implements SwingConstants {
             demo.validate();
             demo.repaint();
 	}
-    };
+    }
 
     // Position
     void setPosition(Component c, int hPos, int vPos) {

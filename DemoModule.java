@@ -195,15 +195,15 @@ public class DemoModule extends JApplet {
 
     public String getName() {
 	return getString(getResourceName() + ".name");
-    };
+    }
 
     public Icon getIcon() {
 	return createImageIcon(iconPath, getResourceName() + ".name");
-    };
+    }
 
     public String getToolTip() {
 	return getString(getResourceName() + ".tooltip");
-    };
+    }
 
     public void mainImpl() {
 	JFrame frame = new JFrame(getName());

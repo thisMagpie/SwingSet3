@@ -95,7 +95,7 @@ public class ExampleFileView extends FileView {
      */
     public String getDescription(File f) {
 	return (String) fileDescriptions.get(f);
-    };
+    }
 
     /**
      * Adds a human readable type description for files. Based on "dot"
@@ -180,6 +180,6 @@ public class ExampleFileView extends FileView {
 	//    return Boolean.FALSE;
 	// }
 	return null;	// Use default from FileSystemView
-    };
+    }
 
 }

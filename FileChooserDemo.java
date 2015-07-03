@@ -350,8 +350,9 @@ public class FileChooserDemo extends DemoModule {
     class MyImageIcon extends ImageIcon {
 	public MyImageIcon(String filename) {
 	    super(filename);
-	};
-	public synchronized void paintIcon(Component c, Graphics g, int x, int y) {
+	}
+
+		public synchronized void paintIcon(Component c, Graphics g, int x, int y) {
 	    g.setColor(Color.white);
 	    g.fillRect(0,0, c.getWidth(), c.getHeight());
 	    if(getImageObserver() == null) {
