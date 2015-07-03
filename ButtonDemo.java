@@ -109,7 +109,7 @@ public class ButtonDemo extends DemoModule implements ChangeListener {
 	addButtons();
 	addRadioButtons();
 	addCheckBoxes();
-	// addToggleButtons();
+	addToggleButtons();
 	currentControls = buttons;
     }
 
@@ -354,8 +354,26 @@ public class ButtonDemo extends DemoModule implements ChangeListener {
     }
 
     public void addToggleButtons() {
-	tab.addTab(getString("ButtonDemo.togglebuttons"), toggleButtonPanel);
+        tab.addTab(getString("ButtonDemo.togglebuttons"), toggleButtonPanel);
+        toggleButtonPanel.setLayout(new BoxLayout(toggleButtonPanel, BoxLayout.X_AXIS));
+        toggleButtonPanel.setBorder(border5);
+        JPanel p1 = createVerticalPanel(true);
+        p1.setAlignmentY(TOP_ALIGNMENT);
+        toggleButtonPanel.add(p1);
+
+        // Toggle Buttons
+        JPanel p2 = createHorizontalPanel(false);
+        p1.add(p2);
+        p2.setBorder(new CompoundBorder(
+                        new TitledBorder(
+                                null, getString("ButtonDemo.togglebuttons"),
+                                TitledBorder.LEFT, TitledBorder.TOP), border5)
+        );
+
+        togglebuttons.add(p2.add(new JToggleButton(getString("ButtonDemo.toggle1"))));
+        p2.add(Box.createRigidArea(HGAP10));
     }
+
 
     public JPanel createControls() {
         JPanel controls = new JPanel() {
