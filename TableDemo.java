@@ -651,14 +651,14 @@ public class TableDemo extends DemoModule {
             }
         } catch (PrinterException pe) {
             String errorMessage = MessageFormat.format(getString("TableDemo.printingFailed"),
-                                                       new Object[] {pe.getMessage()});
+                    pe.getMessage());
             JOptionPane.showMessageDialog(tableView.getParent(),
                                           errorMessage,
                                           getString("TableDemo.printingResult"),
                                           JOptionPane.ERROR_MESSAGE);
         } catch (SecurityException se) {
             String errorMessage = MessageFormat.format(getString("TableDemo.printingFailed"),
-                                                       new Object[] {se.getMessage()});
+                    se.getMessage());
             JOptionPane.showMessageDialog(tableView.getParent(),
                                           errorMessage,
                                           getString("TableDemo.printingResult"),

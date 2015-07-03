@@ -755,8 +755,8 @@ public class SwingSet3 extends JPanel {
 	DemoModule demo = null;
 	try {
 	    Class demoClass = Class.forName(classname);
-	    Constructor demoConstructor = demoClass.getConstructor(new Class[]{SwingSet3.class});
-	    demo = (DemoModule) demoConstructor.newInstance(new Object[]{this});
+	    Constructor demoConstructor = demoClass.getConstructor(SwingSet3.class);
+	    demo = (DemoModule) demoConstructor.newInstance(this);
 	    addDemo(demo);
 	} catch (Exception e) {
 	    System.out.println("Error occurred loading demo: " + classname);
