@@ -61,11 +61,6 @@ class Permuter {
      */
     private int multiplier;
 
-    /**
-     * Pseudorandom nonnegative integer less than n.
-     */
-    private int addend = 22;
-
     public Permuter(int n) {
         if (n<0) {
             throw new IllegalArgumentException();
@@ -90,6 +85,10 @@ class Permuter {
      * integer will be as well.
      */
     public int map(int i) {
+        /*
+      Pseudorandom nonnegative integer less than n.
+     */
+        int addend = 22;
         return (multiplier * i + addend) % modulus;
     }
 
