@@ -136,16 +136,16 @@ public class InternalFrameDemo extends DemoModule {
      */
     public JInternalFrame createInternalFrame(Icon icon, Integer layer, int width, int height) {
         JInternalFrame jif = new JInternalFrame();
+
+        if(!windowTitleField.getText().equals(getString("InternalFrameDemo.frame_label"))) {
+            jif.setTitle(windowTitleField.getText() + "  ");
+        } else {
+            jif = new JInternalFrame(getString("InternalFrameDemo.frame_label") + " " + windowCount + "  ");
+        }
         AccessibleContext ac = jif.getAccessibleContext();
         ac.setAccessibleName(getString("InternalFrameDemo.name"));
         ac.setAccessibleDescription(getString("InternalFrameDemo.accessible_description"));
-
-        if(!windowTitleField.getText().equals(getString("InternalFrameDemo.frame_label"))) {
-	    jif.setTitle(windowTitleField.getText() + "  ");
-	} else {
-	    jif = new JInternalFrame(getString("InternalFrameDemo.frame_label") + " " + windowCount + "  ");
-	}
-
+GI
 	// set properties
 	jif.setClosable(windowClosable.isSelected());
 	jif.setMaximizable(windowMaximizable.isSelected());
