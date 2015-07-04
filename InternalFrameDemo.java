@@ -137,6 +137,7 @@ public class InternalFrameDemo extends DemoModule {
     public JInternalFrame createInternalFrame(Icon icon, Integer layer, int width, int height) {
         JInternalFrame jif = new JInternalFrame();
         AccessibleContext ac = jif.getAccessibleContext();
+        ac.setAccessibleName(getString("InternalFrameDemo.name"));
         ac.setAccessibleDescription(getString("InternalFrameDemo.accessible_description"));
 
         if(!windowTitleField.getText().equals(getString("InternalFrameDemo.frame_label"))) {
