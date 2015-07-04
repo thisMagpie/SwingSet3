@@ -40,6 +40,7 @@
 
 
 import javax.swing.*;
+import javax.accessibility.*;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -134,9 +135,11 @@ public class InternalFrameDemo extends DemoModule {
      * Create an internal frame and add a scrollable imageicon to it
      */
     public JInternalFrame createInternalFrame(Icon icon, Integer layer, int width, int height) {
-	JInternalFrame jif = new JInternalFrame();
+        JInternalFrame jif = new JInternalFrame();
+        AccessibleContext ac = jif.getAccessibleContext();
+        ac.setAccessibleDescription(getString("InternalFrameDemo.accessible_description"));
 
-	if(!windowTitleField.getText().equals(getString("InternalFrameDemo.frame_label"))) {
+        if(!windowTitleField.getText().equals(getString("InternalFrameDemo.frame_label"))) {
 	    jif.setTitle(windowTitleField.getText() + "  ");
 	} else {
 	    jif = new JInternalFrame(getString("InternalFrameDemo.frame_label") + " " + windowCount + "  ");
