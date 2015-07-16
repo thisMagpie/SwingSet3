@@ -145,7 +145,6 @@ public class InternalFrameDemo extends DemoModule {
         AccessibleContext ac = jif.getAccessibleContext();
         ac.setAccessibleName(getString("InternalFrameDemo.name"));
         ac.setAccessibleDescription(getString("InternalFrameDemo.accessible_description"));
-GI
 	// set properties
 	jif.setClosable(windowClosable.isSelected());
 	jif.setMaximizable(windowMaximizable.isSelected());
